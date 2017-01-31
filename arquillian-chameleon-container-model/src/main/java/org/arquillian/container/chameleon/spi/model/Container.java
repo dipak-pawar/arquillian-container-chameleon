@@ -56,5 +56,14 @@ public class Container {
         return null;
     }
 
+    public boolean isVersionMatches(Target target) {
+        if (target.getServer().equalsIgnoreCase(name)) {
+            if (target.getVersion().matches(versionExpression)) {
+                return true;
+            }
+        }
+        return  false;
+    }
+
 
 }
